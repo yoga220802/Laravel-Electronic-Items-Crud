@@ -137,6 +137,12 @@
     document.getElementById('image-upload').addEventListener('dragover', function(event) {
         event.preventDefault();
     });
+
+    document.getElementById('image').addEventListener('change', function() {
+        if (this.files.length > 0) {
+            document.getElementById('image-upload-success').classList.remove('hidden');
+        }
+    });
 </script>
 @endsection
 
