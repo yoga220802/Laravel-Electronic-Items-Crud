@@ -4,8 +4,7 @@ use App\Http\Controllers\ElectronicItemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('electronic-items.index');
+    return view('welcome');
 });
 
 Route::resource('electronic-items', ElectronicItemController::class);
-
